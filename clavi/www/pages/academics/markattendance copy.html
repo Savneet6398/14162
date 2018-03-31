@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Attendance</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../../js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/js.cookie.js"></script>
+    <script>
+        if (Cookies.get('username') == undefined) {
+            window.location = "../login.html";
+        }
+
+    </script>
+    <style>
+        /* Checkbox Hack */
+
+        input[type=checkbox] {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        label {
+
+            display: inline-block;
+
+            cursor: pointer;
+        }
+
+        /* Default State */
+
+        div {
+            background: green;
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Toggled State */
+
+        input[type=checkbox]:checked~div {
+            background: red;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- ----------------------------NAVBAR----------------------------------- -->
+    <nav class="fixed">
+        <div class="nav-wrapper orange avg-color darken-2">
+            <p class="center no-margin">Conform attendance</p>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+
+
+
+        </div>
+
+
+
+    </nav>
+    <!-- ------------------- NAVBAR -------------------------------------------- -->
+
+
+
+
+    <img class="responsive-img no-margin" src="cool_pic.jpg">
+
+
+    <table class="striped highlight centered no-margin">
+        <thead>
+            <tr>
+                <th class="orange avg-color darken-2">Roll no.</th>
+                <th class="orange avg-color darken-2 cellpadding=0 cellspacing=0"> Name </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="red avg-color darken-2">
+                <td>44</td>
+                <td>
+                    <td>Piyush</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>krushn</td>
+            </tr>
+            <tr class="red avg-color darken-2">
+                <td>69</td>
+                <td>Vaibhav</td>
+            </tr>
+            <tr class="red avg-color darken-2">
+                <td>12</td>
+                <td>Vaibhav</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>69</td>
+            </tr>
+            <tr>
+                <td>Sankul </td>
+                <td>89</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+    
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="../../js/script.js" id="global-script"></script>
+
+    <!--script type="text/javascript" src="attendance.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Welcome</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/js.cookie.js"></script>
+
+
+
+
+
+</head>
+
+<body style="background: #FFF8FA">
+
+
+
+
+
+
+
+    <!-- ----------------------------NAVBAR----------------------------------- -->
+    <nav class="fixed">
+        <div class="nav-wrapper green-gradient" >
+            <a href="#!" class="brand-logo">Dashboard</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse" id="mobile-menu-btn"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="waves-effect"><a href="home.html">Home</a></li>
+                <li class="waves-effect"><a href="pages/profile/index.html">Profile</a></li>
+                <li class="waves-effect"><a href="pages/academics/attendance.html">Attendance</a></li>
+                <li class="waves-effect"><a href="pages/academics/marks.html">Marks</a></li>
+                <li class="waves-effect"><a href="pages/forum/index.html">Forum</a></li>
+                <li class="waves-effect"><a href="pages/about.html">About</a></li>
+                <li class="waves-effect"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+
+                <li class="side-nav-header full-width"><a href="#" id="side-nav-head">Clavi</a></li>
+                <li class="side-nav-header full-width center"><img src="http://clavi.herokuapp.com/images/student.png" alt="img" style="max-height: 90px"></li>
+                <li class="side-nav-header full-width center"> <a href="#"><span id="user-greeter" style="font-size: 1.5em; font-weight: 300; color: white">User</span></a> </li>
+
+
+
+
+                <li class="waves-effect full-width"><a href="home.html">Home</a></li>
+                <li class="waves-effect full-width"><a href="pages/profile/index.html">Profile</a></li>
+                <li class="waves-effect full-width"><a href="pages/academics/attendance.html">Attendance</a></li>
+                <li class="waves-effect full-width"><a href="pages/academics/marks.html">Marks</a></li>
+                <li class="waves-effect full-width"><a href="pages/forum/index.html">Forum</a></li>
+                <li class="waves-effect full-width"><a href="pages/about.html">About</a></li>
+
+
+                <li class="waves-effect full-width"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ------------------- NAVBAR END ---------------------------------------- -->
+
+    <!-- ------------------- Tutorial Tap Target-------------------------------------------- -->
+    <div class="tap-target cyan" data-activates="mobile-menu-btn" id="menu-btn-tap-target">
+        <div class="tap-target-content">
+            <h5>Welcome to Clavi!</h5>
+            <p>Find all your most used tasks right here in the hamburger menu.</p>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+    <div class="container">
+        <div class="col s12 m9 pull-m3 row">
+
+
+
+
+
+            <div class="col s12 white-text hide-on-med-and-up">This is empty space.</div>
+
+
+            <div class="col s6 m4">
+                <a href="pages/academics/attendance.html">
+                    <div class="card rounded hoverable green-gradient hidden-overflow">
+                        <div class="card-content no-padding">
+                            <h1 class="white-text text-darken-4 center" id="avg-attendance" style="margin-bottom: 0">--</h1>
+                        </div>
+                        <div class="card-action center truncate white-text" style="padding-top: 0;">
+                            Attendance
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col s6 m4">
+                <a href="pages/forum/index.html">
+                    <div class="card rounded hoverable green-gradient hidden-overflow">
+                        <div class="card-content no-padding">
+                            <h1 class="white-text text-darken-4 center" style="margin-bottom: 0"><i class="material-icons medium">chat</i></h1>
+                        </div>
+                        <div class="card-action center truncate white-text" style="padding-top: 0;">
+                            Chat
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="col s6 m4">
+                <a href="pages/academics/marks.html">
+                    <div class="card rounded hoverable green-gradient hidden-overflow">
+                        <div class="card-content no-padding">
+                            <h1 class="white-text text-darken-4 center" style="margin-bottom: 0"><i class="material-icons medium">beenhere</i></h1>
+                        </div>
+                        <div class="card-action center truncate white-text" style="padding-top: 0;">
+                            Marks
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col s6 m4">
+                <a href="pages/profile/index.html">
+                    <div class="card rounded hoverable green-gradient hidden-overflow">
+                        <div class="card-content no-padding">
+                            <h1 class="white-text text-darken-4 center" style="margin-bottom: 0"><i class="material-icons medium">face</i></h1>
+                        </div>
+                        <div class="card-action center truncate white-text" style="padding-top: 0;">
+                            Profile
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="js/script.js" id="global-script"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+
+    <script>
+        hideWait();
+        if (Cookies.get('username') == undefined) {
+            window.location = "pages/login.html";
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

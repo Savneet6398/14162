@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--<link type="text/css" rel="stylesheet" href="../css/preloader.css">-->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+
+
+    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/js.cookie.js"></script>
+
+    <!--<script src="cordova.js"></script>
+	 phantom library, needed for Cordova api calls, added during build --
+
+	<script src="js/app.js"></script>
+	<!-- recommended location of your JavaScript code relative to other JS files --
+	<script src="xdk/init-dev.js"></script>
+	<!-- normalizes device and document ready events, see README for details -->
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+        #login-page {
+            width: 320px;
+            padding:  0 0;
+            margin: auto;
+            margin-top: 0px;
+            padding-top: 60px;
+            border-radius: 5px;
+
+        }
+
+        #form {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.154);
+            border-radius: 15px;
+        }
+
+        #form input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #form button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #00bcd4;
+            width: 60%;
+            border: 0;
+            padding: 13px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        #form button:hover,
+        #form button:active,
+        #form button:focus {
+            background: #43A047;
+        }
+
+
+        #form .message {
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+        }
+
+        #form .message a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        #form .register-form {
+            display: none;
+        }
+
+
+        #first {
+
+
+            background: linear-gradient(25deg, #00bcd4, #ba68c8);
+
+        }
+
+        #second {
+            text-align: center;
+
+            font-size: 2.0em;
+            font-family: Roboto;
+        }
+
+    </style>
+
+</head>
+
+<body id="first">
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+    <div class="screen-unit valign-wrapper">
+        <div class="center container">
+
+            <div id="login-page">
+                <div id="form">
+                    <h2 class="center">Crunch</h2>
+                    <h2 id="second">LOG IN</h2>
+
+                    <div class="login-form">
+                        <input type="text" id="username" placeholder="username" class="validate" />
+                        <input type="password" id="password" placeholder="password" class="validate" />
+                        <button id="sign-in-btn">login</button>
+
+                        <br>
+                        <br>
+                        <a class="popup" onclick="my()" href="#!">Forgot password?</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <script>
+                function my() {
+                    alert("Your request for password reset is received. Please contact your system administrator");
+                }
+            </script>
+        </div>
+    </div>
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script src="../js/login.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

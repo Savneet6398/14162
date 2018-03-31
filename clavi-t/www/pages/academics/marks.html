@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Marks</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../../js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/js.cookie.js"></script>
+    <script>
+        if (Cookies.get('username') == undefined) {
+            window.location = "../login.html";
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- ----------------------------NAVBAR----------------------------------- -->
+    <nav class="fixed">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Marks</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="waves-effect"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect"><a href="../profile/index.html">Profile</a></li>
+                <li class="waves-effect"><a href="../academics/index.html">Academics</a></li>
+                <li class="waves-effect"><a href="../canteen/index.html">Canteen</a></li>
+                <li class="waves-effect"><a href="../forum/index.html">Forum</a></li>
+
+                <li class="waves-effect"><a href="../about.html">About</a></li>
+
+                <li class="waves-effect"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+                <li class="side-nav-header full-width"><a href="#" id="side-nav-head">Clavi T</a></li>
+                <li class="side-nav-header full-width center"><img src="http://clavi.herokuapp.com/images/student.png" alt="img" style="max-height: 90px"></li>
+                <li class="side-nav-header full-width center"> <a href="#"><span id="user-greeter" style="font-size: 1.5em; font-weight: 300; color: white">User</span></a> </li>
+
+
+
+                <li class="waves-effect full-width"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect full-width"><a href="../profile/index.html">Profile</a></li>
+                <li class="waves-effect full-width"><a href="../academics/index.html">Academics</a></li>
+                <li class="waves-effect full-width"><a href="../canteen/index.html">Canteen</a></li>
+                <li class="waves-effect full-width"><a href="../forum/index.html">Forum</a></li>
+
+                <li class="waves-effect full-width"><a href="../about.html">About</a></li>
+
+                <li class="waves-effect full-width"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ------------------- NAVBAR -------------------------------------------- -->
+
+
+
+
+
+
+
+
+    <div class="container">
+
+        <!-- -------------------- CONTENT ------------------------------------------- -->
+        <div class="input-field col s0;length=20%">
+            <select>
+			<option value="" selected>Semester</option>
+			<option value="1">I</option>
+			<option value="2">II</option>
+			<option value="3">III</option>
+			<option value="4">IV</option>
+			<option value="5">V</option>
+			<option value="6">VI</option>
+			<option value="7">VII</option>
+			<option value="8">VIII</option>
+		</select>
+        </div>
+        <div class="input-field col s8">
+            <select>
+			<option value="" selected>Section</option>
+			<option value="1">A</option>
+			<option value="2">B</option>
+			<option value="3">C</option>
+			<option value="4">D</option>
+		</select>
+        </div>
+        <div class="input-field	col s12">
+            <select>
+			<option value="" selected>Branch</option>
+			<option value="1">Computer Science</option>
+			<option value="2">Civil</option>
+			<option value="3">Mechanical</option>
+			<option value="4">Electrical</option>
+		</select>
+        </div>
+        <br>
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="student.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Vaibhav Pathak<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>
+                <p>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="first_name">TAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 3</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 4</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 3</label>
+                                </div>
+                            </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="student.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Krushn Dayshmookh<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>
+                <p>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="first_name">TAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 3</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 4</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 3</label>
+                                </div>
+                            </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="student.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Sankul Anmadwar<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>
+                <p>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="first_name">TAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 3</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 4</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 3</label>
+                                </div>
+                            </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="student.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Savneet Chhatwal<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>
+                <p>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="first_name">TAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 3</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 4</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 3</label>
+                                </div>
+                            </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="student.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Rahul Manusmare<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>
+                <p>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="first_name">TAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 3</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 4</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 3</label>
+                                </div>
+                            </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="student.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Piyush Joshi<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Summary<i class="material-icons right">close</i></span>
+                <p>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="first_name">TAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 3</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">TAE 4</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 2</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="Marks" id="number" type="number" class="validate">
+                                    <label for="last_name">CAE 3</label>
+                                </div>
+                            </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+
+        <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="../../js/script.js" id="global-script"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

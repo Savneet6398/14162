@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dayshmookh.clavi" version="1.9.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <name>Clavi</name>
+    <description>
+        Your academic assistant.
+    </description>
+    <author email="krushndayshmookh@gmail.com" href="http://www.dayshmookh.com">
+        Dayshmookh Apps
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon density="ldpi" src="www/images/icons/android/mipmap-mdpi/ic_launcher.png" />
+    <icon density="mdpi" src="www/images/icons/android/mipmap-mdpi/ic_launcher.png" />
+    <icon density="hdpi" src="www/images/icons/android/mipmap-hdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="www/images/icons/android/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="www/images/icons/android/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="www/images/icons/android/mipmap-xxxhdpi/ic_launcher.png" />
+    <splash density="land-ldpi" src="www/images/screens/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="www/images/screens/android/screen-mdpi-landscape.png" />
+    <splash density="land-hdpi" src="www/images/screens/android/screen-hdpi-landscape.png" />
+    <splash density="land-xhdpi" src="www/images/screens/android/screen-xhdpi-landscape.png" />
+    <splash density="land-xxhdpi" src="www/images/screens/android/screen-xxhdpi-landscape.png" />
+    <splash density="land-xxxhdpi" src="www/images/screens/android/screen-xxxhdpi-landscape.png" />
+    <splash density="port-ldpi" src="www/images/screens/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="www/images/screens/android/screen-mdpi-portrait.png" />
+    <splash density="port-hdpi" src="www/images/screens/android/screen-hdpi-portrait.png" />
+    <splash density="port-xhdpi" src="www/images/screens/android/screen-xhdpi-portrait.png" />
+    <splash density="port-xxhdpi" src="www/images/screens/android/screen-xxhdpi-portrait.png" />
+    <splash density="port-xxxhdpi" src="www/images/screens/android/screen-xxxhdpi-portrait.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="DisallowOverscroll" value="true" />
+</widget>

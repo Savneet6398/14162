@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Attendance</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../../js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/js.cookie.js"></script>
+    <script>
+        if (Cookies.get('username') == undefined) {
+            window.location = "../login.html";
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- ----------------------------NAVBAR----------------------------------- -->
+    <nav class="fixed">
+        <div class="nav-wrapper blue avg-color darken-2">
+            <a href="#!" class="brand-logo hide-on-med-and-down">Attendance</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="waves-effect"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect"><a href="../profile/index.html">Profile</a></li>
+                <li class="waves-effect"><a href="attendance.html">Attendance</a></li>
+                <li class="waves-effect"><a href="marks.html">Marks</a></li>
+                <li class="waves-effect"><a href="../forum/index.html">Forum</a></li>
+                <li class="waves-effect"><a href="../about.html">About</a></li>
+                <li class="waves-effect"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+                <li class="side-nav-header full-width"><a href="#" id="side-nav-head">Clavi</a></li>
+                <li class="side-nav-header full-width center"><img src="http://clavi.herokuapp.com/images/student.png" alt="img" style="max-height: 90px"></li>
+                <li class="side-nav-header full-width center"> <a href="#"><span id="user-greeter" style="font-size: 1.5em; font-weight: 500; color: white">User</span></a> </li>
+
+                <li class="waves-effect full-width"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect full-width"><a href="../profile/index.html">Profile</a></li>
+                <li class="waves-effect full-width"><a href="attendance.html">Attendance</a></li>
+                <li class="waves-effect full-width"><a href="marks.html">Marks</a></li>
+                <li class="waves-effect full-width"><a href="../forum/index.html">Forum</a></li>
+                <li class="waves-effect full-width"><a href="../about.html">About</a></li>
+                <li class="waves-effect full-width"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+
+
+
+    </nav>
+    <!-- ------------------- NAVBAR -------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+    <!--   <div class="full-width blue no-margin no-padding">
+        <div class="container">
+            <p>jvbda</p>
+
+            <h4 class="center">Your attendance is <span id="attendance-status">loading</span>...</h4>
+        </div>
+
+    </div>
+-->
+    <div class="card-panel avg-color blue darken-2 z-depth-1 no-margin" style="font-family: 'Poppins', sans-serif;">
+        <div class="row center">
+
+            <div class="col s12">
+                <h1 id="avg-percentage" class="light white-text center">--</h1>
+            </div>
+            <div class="col s12">
+                <p class="center white-text flow-text">Your ward's attendance is <span id="attendance-status">loading..</span>.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <ul id="attendance-container" class="collapsible popout expandable">
+            <!--
+               <li class="active">
+                <div class="collapsible-header" tabindex="0"><i class="material-icons">place</i>Second</div>
+                <div class="collapsible-body" style="display: block;"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header" tabindex="0"><i class="material-icons">place</i>Second</div>
+                <div class="collapsible-body" style="display: block;"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+            </li>
+            -->
+        </ul>
+    </div>
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="../../js/script.js" id="global-script"></script>
+    <script type="text/javascript" src="attendance.js"></script>
+
+
+
+
+
+</body>
+
+</html>

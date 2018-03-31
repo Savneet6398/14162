@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <script type="text/javascript" src="/js/js.cookie.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Clavi</a>
+            <!--<ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>-->
+        </div>
+    </nav>
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+    <!--<h3 class="center">Welcome</h3>-->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col s12">
+                <div class="card large">
+
+                    <div class="col s6">
+                        <canvas id="universities-pie" width="200" height="200"></canvas>
+                    </div>
+
+                    <div class="col s3">
+                        <div class="boys">
+                            <h4 class="center">Boys</h4>
+
+                            <div class="container center">
+                                <img src="male.png" class="circle" alt="male" style="max-width: 96px">
+                            </div>
+
+                            <h4 id="boys-num" class="center"></h4>
+                            <hr>
+                            <h5 class="center">Scholarship</h5>
+                            <h4 id="boys-schol" class="center"></h4>
+
+                        </div>
+                    </div>
+
+                    <div class="col s3">
+                        <div class="girls">
+                            <h4 class="center">Girls</h4>
+                            <div class="container center">
+                                <img src="woman.png" class="circle " alt="female" style="max-width: 96px">
+                            </div>
+                            <h4 id="girls-num" class="center"></h4>
+                            <hr>
+                            <h5 class="center">Scholarship</h5>
+
+                            <h4 id="girls-schol" class="center"></h4>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col s6">
+                <div class="card">
+                    <canvas id="branch-bar" height="400"></canvas>
+                </div>
+            </div>
+
+
+            <div class="col s6">
+                <div class="card large">
+                    <div class="card-content">
+                        <h4 class="center">Search for a student</h4>
+                    </div>
+
+                    <div class="container">
+
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your State</option>
+                              <option value="1">Maharashtra</option>
+                              <option value="2"disabled>Option 2</option>
+                              <option value="3"disabled>Option 3</option>
+                            </select>
+                            <label>State</label>
+                        </div>
+
+
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your University</option>
+                              <option value="1">Nagpur</option>
+                              <option value="2"disabled>Option 2</option>
+                              <option value="3"disabled>Option 3</option>
+                            </select>
+                            <label>University</label>
+                        </div>
+
+
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose your College</option>
+                              <option value="1">GHRCE</option>
+                              <option value="2"disabled>Option 2</option>
+                              <option value="3"disabled>Option 3</option>
+                            </select>
+                            <label>College</label>
+                        </div>
+
+
+                        <a class="btn large" href="all.html">Go!</a>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+    <!-- --------------------------- SCRIPTS ------------------------------------ -->
+    <script type="text/javascript" src="/js/script.js" id="global-script"></script>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+
+        function getUni() {
+            $.get("/universities", function(universities) {
+
+                var unidata = {
+                    labels: [],
+                    datasets: [{
+                        data: [],
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"]
+                    }]
+                };
+
+
+
+
+                var totalbranch = {
+                    cse: 0,
+                    mechanical: 0,
+                    electrical: 0,
+                    etrx: 0,
+                    it: 0
+                }
+
+                var totalboys = 0;
+                var totalgirls = 0;
+                var totalstudents = 0;
+
+                var scholarboys = 0;
+                var scholargirls = 0;
+                var scholarstudents = 0;
+
+
+                for (var university in universities) {
+
+                    unidata["labels"].push(universities[university]["university"]["name"]);
+
+                    //console.log(universities[university]);
+
+                    var l = universities[university]["university"]["colleges"].length;
+                    unidata["datasets"][0]["data"].push(l);
+
+                    //console.log(universities[university]["university"]["colleges"].length);
+
+
+                    for (var college in universities[university]["university"]["colleges"]) {
+                        totalboys += universities[university]["university"]["colleges"][college]["student"]["boys"];
+                        totalgirls += universities[university]["university"]["colleges"][college]["student"]["girls"];
+                        totalstudents += universities[university]["university"]["colleges"][college]["student"]["total"];
+
+                        scholarboys += universities[university]["university"]["colleges"][college]["scholarship"]["boys"];
+                        scholargirls += universities[university]["university"]["colleges"][college]["scholarship"]["girls"];
+                        scholarstudents += universities[university]["university"]["colleges"][college]["scholarship"]["total"];
+
+
+                        var branches = universities[university]["university"]["colleges"][college]["branch"];
+
+                        //branchdata.datasets["label"] = universities[university]["university"]["colleges"][college];
+                        for (var branch in branches) {
+                            //console.log(college);
+                            totalbranch[branch] += branches[branch];
+                        }
+
+                    }
+
+
+
+
+
+
+                }
+
+                document.getElementById("boys-num").innerHTML = totalboys;
+                document.getElementById("girls-num").innerHTML = totalgirls;
+
+                document.getElementById("boys-schol").innerHTML = scholarboys;
+                document.getElementById("girls-schol").innerHTML = scholargirls;
+
+
+                var branchdata = {
+
+                    labels: ["cse", "mechanical", "electrical", "etrx", "it"],
+                    datasets: [{
+                        data: [totalbranch.cse, totalbranch.mechanical, totalbranch.electrical, totalbranch.etrx, totalbranch.it],
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"]
+                    }]
+                };
+                //console.log(unidata);
+
+                new Chart(document.getElementById("universities-pie"), {
+                    type: 'doughnut',
+                    data: unidata,
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Colleges in universities'
+                        }
+                    }
+                });
+
+
+
+                new Chart(document.getElementById("branch-bar"), {
+                    type: 'bar',
+                    data: branchdata,
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'students in branches'
+                        },
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+
+
+
+
+            });
+        }
+
+
+        getUni();
+
+    </script>
+
+</body>
+
+</html>

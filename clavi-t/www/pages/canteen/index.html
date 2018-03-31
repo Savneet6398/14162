@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Canteen</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../../js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/js.cookie.js"></script>
+
+    <script>
+        if (Cookies.get('username') == undefined) {
+            window.location = "pages/login.html";
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- ----------------------------NAVBAR----------------------------------- -->
+    <nav class="fixed">
+        <div class="nav-wrapper blue darken-2">
+            <a href="#!" class="brand-logo">Crunch</a>
+
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li class="waves-effect"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect"><a href="../profile/index.html">Profile</a></li>
+                <li class="waves-effect"><a href="../academics/index.html">Academics</a></li>
+                <li class="waves-effect"><a href="#!">Canteen</a></li>
+                <li class="waves-effect"><a href="../forum/index.html">Forum</a></li>
+
+                <li class="waves-effect"><a href="#">About</a></li>
+                <li class="waves-effect"><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+
+                <li class="side-nav-header full-width"><a href="#" id="side-nav-head">Clavi T</a></li>
+                <li class="side-nav-header full-width center"><img src="http://clavi.herokuapp.com/images/student.png" alt="img" style="max-height: 90px"></li>
+                <li class="side-nav-header full-width center">
+                    <a href="#"><span id="user-greeter" style="font-size: 1.5em; font-weight: 300; color: white">User</span></a>
+                </li>
+
+                <li class="waves-effect full-width"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect full-width"><a href="../profile/index.html">Profile</a></li>
+                <li class="waves-effect full-width"><a href="../academics/index.html">Academics</a></li>
+                <li class="waves-effect full-width"><a href="#!">Canteen</a></li>
+                <li class="waves-effect full-width"><a href="../forum/index.html">Forum</a></li>
+
+                <li class="waves-effect full-width"><a href="../about.html">About</a></li>
+
+
+                <li class="waves-effect full-width"><a href="#" class="logout-btn">Logout</a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <!-- ------------------- NAVBAR -------------------------------------------- -->
+
+
+
+
+    <script>
+        document.getElementById("user-greeter").innerHTML = Cookies.get('username-name');
+
+    </script>
+
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red" href="#cart-modal">
+            <i class="large material-icons">shopping_cart</i>
+        </a>
+        <a class="btn-floating btn-large green" href="history.html">
+            <i class="large material-icons">history</i>
+        </a>
+
+        <!--
+        <a class="btn-floating btn-large green" href="pages/history.html">
+            <i class="large material-icons">history</i>
+        </a>-->
+    </div>
+    <!-- Order Modal Trigger --  NOW IT IS TRIGGERED PROGRAMATICALLY
+    <a href="#order-modal" class="btn waves-effect waves-teal white teal-text full-width">Orders<i class="material-icons right">launch</i></a> -->
+
+    <!-- Order Modal Structure -->
+    <div id="order-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12">
+                    <h3 id="modal-item-name" class="blue-text text-darken-5 center"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <img src="" alt="item image" id="modal-image" width="100%">
+                </div>
+
+                <div class="col s12 m6">
+
+                    <p class="grey-text text-darken-5 flow-text col s12">Rs. <span id="modal-rate" class="black-text"></span> per plate</p>
+
+                    <div class="col s12 input-field">
+                        <input id="order-quantity" type="number" class="validate">
+                        <label data-error="Enter an interger." for="order-quantity">Quantity</label>
+                    </div>
+
+                    <h4 class="col s12">Rs. <span id="total-amount" class="strong"></span></h4>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <a href="#!" class="modal-action waves-effect waves-orange btn-flat green white-text" id="submit-order-btn">Order</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+        </div>
+    </div>
+
+
+
+    <!-- Cart Modal Structure -->
+    <div id="cart-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+
+            <h4 class="center">Your orders</h4>
+            <!--    <div class="row">
+                <div class="col s8 center">Item</div>
+
+                <div class="col s4 center">Amount</div>
+            </div>
+-->
+            <div class="collection full-width" id="cart-items">
+
+            </div>
+
+            <h4 class="right">Total: Rs. <span id="total-amt">0.00</span></h4>
+        </div>
+
+
+        <div class="modal-footer">
+
+            <a href="#payment-modal" class="modal-action waves-effect waves-orange btn-flat green white-text" id="pay-now-btn">Confirm</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red-text">Cancel</a>
+        </div>
+    </div>
+
+    <!-- Payment Modal Structure -->
+    <div id="payment-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+
+
+            <div class="container">
+                <h3 class="center">Rs. <span id="confirm-amt"></span></h3>
+                <div class="row">
+                    <div class="payment-option col s6 waves-effect"><img src="../../images/paytm.png" alt="PayTM"></div>
+
+                    <div class="payment-option col s6 waves-effect"><img src="../../images/paypal.png" alt="PayPal"></div>
+                </div>
+                <div class="row">
+                    <div class="payment-option col s6 waves-effect"><img src="../../images/netbanking.png" alt="Net Banking"></div>
+
+                    <div class="payment-option col s6 waves-effect"><img src="../../images/upi.png" alt="UPI"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red-text center">Cancel</a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ------------------- PAGE CONTENTS ------------------------ -->
+
+
+    <div class="col s12">
+        <ul class="tabs blue darken-2">
+            <li class="tab "><a class="white-text active" href="#snacks">Snacks</a></li>
+            <li class="tab "><a class="white-text" href="#sweets">Sweets</a></li>
+            <li class="tab "><a class="white-text" href="#colddrinks">Cold Drinks</a></li>
+            <li class="tab "><a class="white-text" href="#icecreams">Ice creams</a></li>
+            <li class="tab "><a class="white-text" href="#hotdrinks">Hot Drinks</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+
+
+        <!--
+        <div>
+            <h4>Trending</h4>
+            <div class="row" id="trending"></div>
+        </div>
+
+
+-->
+
+        <div class="row">
+
+
+
+
+            <div class="col s12" id="snacks"></div>
+            <div class="col s12" id="sweets"></div>
+            <div class="col s12" id="icecreams"></div>
+            <div class="col s12" id="colddrinks"></div>
+            <div class="col s12" id="hotdrinks"> </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="../../js/script.js" id="global-script"></script>
+    <script type="text/javascript" src="canteen.js"></script>
+
+
+
+    <a href="http://krushndayshmookh.github.io" class="hide-on-med-and-down">
+        <p class="center">Made by Crunchy Devs</p>
+    </a>
+
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+.home-page-menu-item {
+    width: 100%;
+
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.card-with-padding {
+    padding: 5px;
+}
+
+.height-seventy {
+    height: 70%;
+}
+
+.dev-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.card.tiny {
+    height: 200px;
+}
+
+.no-text-decoration {
+    text-decoration: none;
+}
+
+.screen-unit {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+#password-reset-box {
+    display: none;
+}
+
+.loading-flashing {
+    animation: loading-flash 1s infinite alternate;
+}
+
+.profile-picture {
+    height: auto;
+    width: 200px;
+}
+
+
+@keyframes loading-flash {
+    0% {
+        color: white;
+    }
+    100% {
+        color: red;
+    }
+}
+
+nav .nav-wrapper .side-nav li a {
+    font-weight: 400;
+    color: white;
+    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+#side-nav-head {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 400;
+    font-family: Roboto;
+    color: white;
+}
+
+.strong {
+    font-weight: 500;
+}
+
+.graph-bar {
+    /*height: 20px;
+    background: red;*/
+    height: 3px;
+    margin: 0;
+}
+
+.graph-bar-new {
+    height: 20px;
+    /*background: red;*/
+}
+
+.padded {
+    padding: 24px;
+}
+
+.bottom-padded {
+    padding-bottom: 24px;
+}
+
+.one-subject td {
+    border: 1px solid #555555;
+    border-collapse: collapse;
+}
+
+.text-shadow {
+    text-shadow: 0px 1px 5px #000;
+}
+
+#waiting-overlay {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+
+
+
+#cart-modal .modal-content {
+    padding: 24px 0px;
+
+}
+
+ul.side-nav {
+    /*background: linear-gradient(155deg, #c5cae9, #0277bd);
+    background: #2194ff ;
+    background: radial-gradient(circle, #2194ff, yellow)*/
+    background: #457fca;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #5691c8, #457fca);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5691c8, #457fca);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+#cart-modal .modal-content h4 {
+    margin: 24px;
+}
+
+
+.payment-option img {
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.blue-gradient {
+    background: linear-gradient(to right, #4527a0, #f50057);
+    /* background: #ffffff; */
+}
+
+.light-blue-gradient {
+    background: linear-gradient(to right, #A4E1FC, #60C7F9);
+    /* background: #ffffff; */
+}
+
+.red-gradient {
+    /* background: #f85032;*/
+    background: linear-gradient(45deg, #FF8664, #FF4265);
+}
+
+.green-gradient {
+    background: linear-gradient(to right, #45a247, #56ab2f);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.hydrogen-gradient {
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.vanusa-gradient {
+    background: #DA4453;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav {
+    box-shadow: none;
+}
+
+nav .nav-wrapper .side-nav li a {
+    font-weight: 400;
+    color: white;
+}
+
+#side-nav-head {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 400;
+    font-family: Roboto;
+    color: white;
+}
+
+
+.collapsible-header {
+    padding: 10px;
+    margin: 8px;
+}
+
+
+
+.rounded {
+    border-radius: 8px;
+
+}
+
+.hidden-overflow {
+    overflow: hidden;
+}
+
+.brand-logo {
+    font-weight: 400;
+}
+
+.circle-highlight {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #FF397F;
+    color: #ffffff;
+    margin: 2px;
+}
+
+
+
+#marks-table-container li .collapsible-header {
+    background: transparent;
+}

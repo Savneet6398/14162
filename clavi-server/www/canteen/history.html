@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>Canteen</title>
+
+    <!-- -------------------- META ------------------------------------------- -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- -------------------- FONT ------------------------------------------- -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- -------------------- CSS ------------------------------------------- -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <!-- -------------------- SCRIPTS ------------------------------------------- -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/js.cookie.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- ----------------------------NAVBAR----------------------------------- -->
+    <nav class="fixed blue darken-2">
+        <div class="nav-wrapper blue darken-2 container">
+            <a href="#!" class="brand-logo">Crunch</a>
+
+
+            <ul class="right">
+                <!--
+                <li class="waves-effect"><a href="../../home.html">Home</a></li>
+                <li class="waves-effect"><a href="../profile/index.html">Profile</a></li>
+
+--
+                <li class="waves-effect"><a href="#" class="logout-btn">Logout</a></li>-->
+                <li class="waves-effect"><a href="index.html">Home</a></li>
+                <li class="waves-effect"><a href="menu.html">Menu</a></li>
+                <li class="waves-effect"><a href="history.html">History</a></li>
+
+                <li class="waves-effect"><a href="#">Earnings: Rs. <span id="earnings">0</span></a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- ------------------- NAVBAR -------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+    <div class="container">
+        <h3 class="center">Old completed orders</h3>
+
+
+
+
+
+        <table class="bordered centered highlight">
+            <thead>
+
+
+                <tr>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                    <th>Customer</th>
+
+                </tr>
+            </thead>
+
+            <tbody id="orders-list">
+
+            </tbody>
+        </table>
+
+
+
+        <!--
+       <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                    <td>Eclair</td>
+                    <th>Amount</th>
+                    <td>$0.87</td>
+                </tr>
+
+
+
+        <div class="row">
+            <div class="col s6 row">
+                <div class="col center s12">Item</div>
+                <div class="col center s1">Time</div>
+                <div class="col center s6">Name</div>
+                <div class="col center s1">Quantity</div>
+                <div class="col center s1">Rate</div>
+                <div class="col center s2">Amount</div>
+            </div>
+
+            <div class="col s3">Actions</div>
+        </div>
+
+        <div class="col s12"></div>
+
+        <div class="collection" id="orders-list"></div>
+-->
+
+    </div>
+
+
+
+
+    <!-- -------------------- CONTENT ------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------Data SCRIPTS----------------------------------- -->
+
+
+
+
+
+
+    <!-- ---------------------------SCRIPTS----------------------------------- -->
+
+
+    <script type="text/javascript" src="js/script.js" id="global-script"></script>
+    <script type="text/javascript" src="js/canteen.js"></script>
+<script>
+        $(document).ready(function() {
+            $.get("/closedorders", function(orders) {
+
+                for (item in orders) {
+                    var datetime = new Date(orders[item].time);
+                    var orderdate = datetime.getDate() + "-" + (datetime.getMonth() + 1);
+                    var ordertime = datetime.getHours() + ":" + datetime.getMinutes();
+                    var orderamount = parseInt(orders[item].quantity) * parseInt(orders[item].rate);
+
+                    //if (orders[item].status == "open") {
+                    openorders = ("<tr id='" + orders[item].item + Date.parse(orders[item].time) + "'><td>" + orderdate + "<br><span class='grey-text'>" + ordertime + "</span></td><td>" + orders[item].item + "<br><span class='grey-text'>" + orders[item].category + "</span></td><td>" + orders[item].quantity + "</td><td>" + orders[item].rate + "</td><td class='strong'>" + orderamount + "</td><td>" + orders[item]["username"] + "</td></tr>");
+                    //.concat(openorders);
+                    $("#orders-list").prepend(openorders);
+                    //}
+
+                }
+                updateEarning();
+                // console.log(orders);
+            });
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

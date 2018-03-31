@@ -1,0 +1,35 @@
+Student Panel
+{
+    1.Attendance
+    2.Marks
+    3.Documents
+    4.Time Table (exam,class)
+    5.Notification
+    6.Remainders(library, tae etc)
+    7.profile
+    8.question bank 
+}
+
+Teacher panel 
+{
+    1.Attendance
+    2.Marks
+    3.Time table
+    4.Tae
+}
+
+college admin panel
+{
+    1.Time table
+    2.documents upload
+    3.Branch report
+    4.Syllabus (auto.)
+}
+
+govt admin panel 
+{
+    1.list of college 
+    2.college statistics 
+    3.Results
+    4.Syllabus upload (for university college )
+
